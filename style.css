@@ -1,0 +1,736 @@
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+  }
+body{
+ height: 100vh;
+ width: 100vw;
+ background-image: url('casinotable.jpg');
+
+}
+.back{
+    display: none;
+}
+
+.back.toggle{
+    display: inline;
+}
+
+
+nav{
+    font-size: 100px;
+    color: white;
+    position: absolute;
+    z-index: 0;
+    width: 20%;
+    pointer-events: none;
+   
+}
+
+.loadContainer {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    visibility: visible;
+    position: absolute;
+    top: 20%;
+    left: 24%;
+    z-index: 1;
+    background: rgb(24, 24, 24);
+    height: 50vh;
+    width: 50vw;
+    justify-content: center; 
+    align-content: center;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.loadContainer.toggle{
+visibility: hidden;
+}
+
+.loadContent{
+    color: white;
+    font-size: 50px;
+}
+
+.beginPlayingButton{
+    width: 50%;
+}
+
+.dealerContainer{
+    display: flex;
+    justify-content: center;
+    height: 30%;
+    width: 100%;
+    /* border: 5px solid red; */
+}
+
+.dealerSection{
+    padding-top: 50px;
+    width: 100%;
+    height: 40%;
+}
+
+.gameContainer {
+    height: 100%;
+    width: 100%;
+    display: flexbox;
+    
+ 
+}
+.cardSection {
+width: 100%;
+height: 40%;
+}
+
+.cardHolder{
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 5px solid pink; */
+    height: 50%;
+    width: 100%;
+    margin: auto;
+    align-content: center;
+    justify-content: center;
+}
+
+img{
+    height: 200px;
+    
+}
+
+.countContainer {
+display: flex;
+flex-direction: column;
+width: 100%;
+margin: auto;
+align-items: center;
+color: white;
+}
+
+.scoresContainer{
+    display: flex;
+    width: 60%;
+    font-size: 40px;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+.buttonContainer{
+display: flex;
+gap: 20px;
+margin-top: 20px;
+}
+
+button{
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+    font-size: 30px;
+}
+
+.modalContainer{
+    display:flex;
+    flex-wrap: wrap;
+    visibility: hidden;
+    position: relative;
+    bottom: 99%;
+    left: 69%;
+    z-index: 1;
+    background: rgb(24, 24, 24);
+    height: 60vh;
+    width: 30vw;
+    justify-content: center; 
+    align-content: center;
+    text-align: center;
+   
+}
+
+.modalContainer.toggle{
+visibility: visible;
+animation-duration: 2s;
+animation-name: fadein;
+}
+
+@keyframes fadein {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+
+
+.modalContent{
+    color: white;
+    font-size: 50px;
+}
+
+.modalLoseContainer{
+    display:flex;
+    flex-wrap: wrap;
+    visibility: hidden;
+    position: relative;
+    top: -159%;
+    left: 69%;
+    z-index: 1;
+    background: rgb(24, 24, 24);
+    height: 60vh;
+    width: 30vw;
+    justify-content: center; 
+    align-content: center;
+    text-align: center;
+}
+
+.modalLoseContent {
+    color: white;
+    font-size: 50px;
+}
+.modalLoseContainer.toggle{
+    visibility: visible;
+    animation-duration: 2s;
+animation-name: fadein;
+}
+
+@keyframes fadein {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+
+  .betContainer{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    visibility: hidden;
+    position: absolute;
+    top: 20%;
+    left: 24%;
+    z-index: 1;
+    background: rgb(24, 24, 24);
+    height: 50vh;
+    width: 50vw;
+    justify-content: center; 
+    align-content: center;
+    text-align: center;
+    border-radius: 10px;
+  }
+  .betContent{
+      color: white;
+      font-size: 60px;
+  }
+  .bet{
+      height: 70px;
+      width: 70px;
+      font-size: 20px;
+  }
+  .betContainer.toggle{
+      visibility: visible;
+  }
+  .gameOverContainer{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    visibility: hidden;
+    position: absolute;
+    top: 20%;
+    left: 24%;
+    z-index: 1;
+    background: rgb(24, 24, 24);
+    height: 50vh;
+    width: 50vw;
+    justify-content: center; 
+    align-content: center;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+  .gameOverContainer.toggle {
+      visibility: visible;
+  }
+
+  .gameOverContent{
+color: white;
+font-size: 50px;
+  }
+  .newGameButton{
+      width: 30%;
+  }
+
+  .doubleButton{
+      width: 50%;
+  }
+ 
+  .tieContainer {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    visibility: hidden;
+    position: absolute;
+    top: 20%;
+    left: 24%;
+    z-index: 1;
+    background: rgb(24, 24, 24);
+    height: 50vh;
+    width: 50vw;
+    justify-content: center; 
+    align-content: center;
+    text-align: center;
+    border-radius: 10px;
+  }
+.tieContent {
+    color: white;
+    font-size: 50px;
+}
+  .tieButton{
+    width: 30%;
+  }
+    
+  .tieContainer.toggle{
+    visibility: visible;
+  }
+
+  input{
+      height: 70px;
+      width: 200px;
+      font-size: 20px;
+      text-align: center;
+  }
+
+  .userQuitContainer {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    visibility: hidden;
+    position: absolute;
+    top: 20%;
+    left: 24%;
+    z-index: 1;
+    background: rgb(24, 24, 24);
+    height: 50vh;
+    width: 50vw;
+    justify-content: center; 
+    align-content: center;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.userQuitContainer.toggle{
+visibility: visible;
+}
+
+.userQuitContent{
+    color: white;
+    font-size: 50px;
+}
+
+
+  @media only screen and (max-width: 1000px)
+  {
+    nav{
+        font-size: 4rem; 
+    }
+
+.loadContainer {
+    left: 20%;
+    height: 40vh;
+    width: 60vw;
+}
+
+
+.loadContent{
+    color: white;
+    font-size: 27px;
+    line-height: 40px;
+}
+
+.beginPlayingButton{
+font-size: 25px;
+}
+
+.scoresContainer{
+    font-size: 40px;
+  
+    width: 100%;
+    
+}
+
+.buttonContainer{
+gap: 20px;
+}
+
+button{
+    width: 90px;
+    height: 50px;
+    font-size: 30px;
+}
+
+.betContainer{
+    top: 20%;
+    left: 15%;
+    height: 30vh;
+    width: 70vw;
+    
+  }
+  .betContent{
+        width: 100%;
+      color: white;
+      font-size: 60px;
+      line-height: 60px;
+  }
+  .bet{
+      height: 70px;
+      width: 70px;
+      font-size: 20px;
+  }
+  .submitBet{
+      width: 20%;
+  }
+
+  img{
+      height: 200px;
+  }
+.dealerContainer{
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.cardHolder{
+    margin-top: 40px;
+}
+body{
+    padding-bottom: 50px;
+}
+
+.modalContainer{
+    position: relative;
+    bottom: 80%;
+    left: 25%;
+    z-index: 1;
+    height: 30vh;
+    width: 60vw;
+}
+
+.modalContent{
+    font-size: 30px;
+}
+
+.modalLoseContainer{
+    top: -100%;
+    left: 25%;
+    z-index: 1;
+    height: 30vh;
+    width: 50vw;
+}
+
+.modalLoseContent {
+    color: white;
+    font-size: 30px;
+}
+
+
+.tieContainer {
+    top: 30%;
+    left: 24%;
+    height: 20vh;
+    width: 60vw;
+  }
+.tieContent {
+    color: white;
+    font-size: 40px;
+    line-height: 45px;
+}
+  .tieButton{
+    width: 60%;
+  }
+
+  .userQuitContainer{
+    top: 20%;
+    left: 24%;
+    height: 30vh;
+    width: 60vw;
+  }
+  .userQuitContent{
+    color: white;
+    font-size: 40px;
+    line-height: 45px;
+  }
+
+}
+
+
+
+@media only screen and (max-width: 900px)
+  {
+    nav{
+        font-size: 3rem; 
+    }
+
+.loadContainer {
+    top: 20%;
+    left: 10%;
+    height: 40vh;
+    width: 80vw;
+    border-radius: 10px;
+}
+
+
+.loadContent{
+    color: white;
+    font-size: 30px;
+    line-height: 40px;
+}
+.beginPlayingButton{
+font-size: 25px;
+}
+.scoresContainer{
+    font-size: 30px;
+    /* border: 2px solid red; */
+    width: 100%;
+    
+}
+
+.buttonContainer{
+gap: 20px;
+}
+
+button{
+    width: 90px;
+    height: 50px;
+    font-size: 20px;
+}
+.betContainer{
+    top: 20%;
+    left: 15%;
+    height: 30vh;
+    width: 70vw;
+    
+  }
+  .betContent{
+        width: 100%;
+      color: white;
+      font-size: 50px;
+      line-height: 60px;
+  }
+  .bet{
+      height: 70px;
+      width: 70px;
+      font-size: 20px;
+  }
+
+  img{
+      height: 190px;
+  }
+.dealerContainer{
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.cardHolder{
+    margin-top: 40px;
+}
+body{
+    padding-bottom: 50px;
+}
+
+.modalContainer{
+    position: relative;
+    bottom: 80%;
+    left: 25%;
+    z-index: 1;
+    height: 30vh;
+    width: 60vw;
+}
+
+.modalContent{
+    font-size: 30px;
+}
+
+.modalLoseContainer{
+    top: -100%;
+    left: 25%;
+    z-index: 1;
+    height: 30vh;
+    width: 50vw;
+}
+
+.modalLoseContent {
+    color: white;
+    font-size: 30px;
+}
+
+
+.tieContainer {
+    top: 30%;
+    left: 24%;
+    height: 20vh;
+    width: 60vw;
+  }
+.tieContent {
+    color: white;
+    font-size: 40px;
+    line-height: 45px;
+}
+  .tieButton{
+    width: 60%;
+  }
+  .userQuitContainer{
+    top: 20%;
+    left: 24%;
+    height: 30vh;
+    width: 60vw;
+  }
+  .userQuitContent{
+    color: white;
+    font-size: 40px;
+    line-height: 45px;
+  }
+
+}
+
+@media only screen and (max-width: 500px)
+  {
+    nav{
+        font-size: 2rem; 
+    }
+
+.loadContainer {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    visibility: visible;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    z-index: 1;
+    background: rgb(24, 24, 24);
+    height: 40vh;
+    width: 80vw;
+    justify-content: center; 
+    align-content: center;
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+.loadContent{
+    color: white;
+    font-size: 15px;
+    line-height: 30px;
+}
+.beginPlayingButton{
+font-size: 20px;
+}
+.scoresContainer{
+    font-size: 25px;
+    
+}
+
+.buttonContainer{
+gap: 20px;
+}
+
+button{
+    width: 70px;
+    height: 50px;
+    font-size: 10px;
+}
+.betContainer{
+    display:flex;
+    top: 20%;
+    left: 15%;
+    height: 50vh;
+    width: 70vw;
+    
+  }
+  .betContent{
+      color: white;
+      font-size: 25px;
+      line-height: 60px;
+  }
+  .bet{
+      height: 70px;
+      width: 70px;
+      font-size: 20px;
+  }
+
+  img{
+      height: 120px;
+  }
+.dealerContainer{
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.cardHolder{
+    margin-top: 40px;
+}
+body{
+    padding-bottom: 50px;
+}
+
+.modalContainer{
+    position: relative;
+    bottom: 80%;
+    left: 25%;
+    z-index: 1;
+    height: 30vh;
+    width: 60vw;
+}
+
+.modalContent{
+    font-size: 20px;
+}
+
+.modalLoseContainer{
+    top: -100%;
+    left: 25%;
+    z-index: 1;
+    height: 30vh;
+    width: 50vw;
+}
+
+.modalLoseContent {
+    color: white;
+    font-size: 20px;
+}
+
+
+.tieContainer {
+    top: 20%;
+    left: 24%;
+    height: 30vh;
+    width: 60vw;
+  }
+.tieContent {
+    color: white;
+    font-size: 30px;
+    line-height: 35px;
+}
+  .tieButton{
+    width: 40%;
+  }
+
+  .userQuitContainer{
+    top: 20%;
+    left: 24%;
+    height: 30vh;
+    width: 60vw;
+  }
+  .userQuitContent{
+    color: white;
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+}

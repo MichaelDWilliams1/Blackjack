@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <nav>
+    $<span class="dollarAmount">500</span>
+    Bet: <span class="betDisplay"></span>
+    </nav>
+    <section class="gameContainer">
+        <section class="dealerSection">
+            <!-- <img src="backcard.jpeg" class="back"> -->
+    <!-- <section class="dealerContainer">
+        <img class="dealerCards">
+    </section> -->
+</section>
+<section class="cardSection">
+    <!-- <section class="cardHolder">
+    <img class="card">
+</section> -->
+</section>
+<section class="countContainer">
+    <section class="scoresContainer">
+<h1>Player 1 Count: <span class="count">0</span></h1>
+<h1>Dealer Count: <span class="dealerScore">0</span></h1>
+</section>
+<section class="buttonContainer">
+<button class="drawButton">Draw</button>
+<button class="holdButton">Hold</button>
+<button class="doubleButton">Double Down</button>
+</section>
+</section>
+</section>
+<section class="modalContainer">
+    <section class="modalContent">
+        <p>You win that round!</p>
+        <p>You now have $<span class="modalWinAmount"></span>.</p>
+<p>Play again?</p>
+<button class="playAgainButton">Yes</button>
+<button class="winNoButton">No</button>
+    </section>
+</section>
+<section class="modalLoseContainer">
+    <section class="modalLoseContent">
+        <p>You lost!</p>
+        <p>You now have $<span class="modalLoseAmount"></span>.</p>
+<p>Play again?</p>
+<button class="anotherPlayAgainButton">Yes</button>
+<button class="loseNoButton">No</button>
+    </section>
+</section>
+<section class="loadContainer">
+    <section class="loadContent">
+        <p>Welcome! <br> Ready to play some Blackjack?</p>
+        <p>You will start with $500. If you run out of money the game is over.</p>
+<button class="beginPlayingButton">Start Game</button>
+
+    </section>
+</section>
+<section class="betContainer">
+    <section class="betContent">
+        <form>
+			<label for="takingBet"> Place your bet: </label>
+			<input id="betAmount" type="number" placeholder="Place your bet here">
+		</form>
+<button class="submitBet">Submit</button>
+    </section>
+</section>
+<section class="gameOverContainer">
+    <section class="gameOverContent">
+       <p>You are out of money! <br>
+    Game Over!</p>
+    <p>Cick new game to play again</p>
+<button class="newGameButton">New Game</button>
+
+    </section>
+</section>
+<section class="tieContainer">
+    <section class="tieContent">
+       <p>Looks like a tie!</p>
+    <p>Play again?</p>
+<button class="tieButton">Play Again</button>
+    </section>
+</section>
+
+<section class="userQuitContainer">
+    <section class="userQuitContent">
+       <p>You ended the game with $<span class="quitAmount"></span><br>
+    Thanks for playing!</p>
+    </section>
+</section>
+<script src="app.js"></script>
+</body>
+</html>
